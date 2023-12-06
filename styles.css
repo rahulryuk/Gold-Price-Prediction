@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@200&display=swap');
+body{
+    background-image: url('https://www.equedia.com/wp-content/uploads/2022/05/gold-price-forecast-bullion-on-chart-e1652162179499.jpg');
+    background-color: #cccccc; 
+    height:100vh;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    overflow-y: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    background-image: linear-gradient(45deg, #797676, #3a2c09);
+    border-radius: 2.0em;
+    padding: 10px;
+    width: 300px;
+    height: 460px;
+    margin: auto;
+    margin-top: 20px;
+    opacity: 0.8;
+    position: relative;
+}
+
+.form::before {
+    content: '';
+    background-image: linear-gradient(45deg, #d7cfcf, #ffb700);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.8;
+    border-radius: 2.0em;
+}
+
+.button {
+    margin-top: auto; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    background: #ff5900;
+    color: black;
+    padding: 0.7em 5.5em;
+    display: flex;
+    align-items: center;
+    border: 2px solid #66da4300;
+    border-radius: 5em;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+  .button:hover {
+    border: 2px solid #ff5900;
+    background: #00000000;
+    color: #ff5900;
+  }
+  
+  .button:active {
+    border: 2px solid #66da4300;
+    background: #ff5900;
+    color: black;
+  }
+  
+  .input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #66da4300;
+    border-bottom: 1px solid #ff5900;
+    outline: none;
+    background-color: transparent;
+    color: #ff5900;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.2s;
+  }
+  
+  .input:focus {
+    border: 1px solid #66da4300;
+    border-bottom: 1px solid #ff5900;
+    background-color: transparent;
+    color: white;
+  }
+  
+  .input::placeholder {
+    color: #9b725b;
+  }
+  
+  .textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    width: calc(100% - 10px);
+    padding: 8px;
+    height: 100px;
+    margin-bottom: 20px;
+    border: 1px solid #66da4300;
+    border-bottom: 1px solid #ff5900;
+    outline: none;
+    background-color: transparent;
+    color: #ff5900;
+  }
+  
+  .textarea::placeholder {
+    color: #9b725b;
+  }
+  
+  .textarea:focus {
+    border: 1px solid #66da4300;
+    border-bottom: 1px solid #ff5900;
+    background-color: transparent;
+    color: white;
+  }
+.heading{
+    text-align: center;
+    color:white;
+    text-shadow: 2px 2px 5px red;
+    
+    
+}
+.performance {
+  background-image: linear-gradient(red, yellow);
+    width: 50%; 
+    max-width: 30%px; 
+    height: 140px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: 400ms;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+
+    @media (max-width: 480px) {
+        width: 95%;
+    }
+}
+.performance:hover{
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
