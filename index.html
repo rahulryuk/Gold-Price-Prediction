@@ -1,0 +1,63 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 class="heading">Gold Price Prediction Model</h1>
+    <div class="performance">
+        {% if average_r2 %}
+        <h2 class="r2">R2 score of Model: {{ average_r2 }}</h2>
+    {% endif %}
+    {% if average_mae %}
+        <h2 class="r2">MSE of Model: {{ average_mae }}</h2>
+    {% endif %}
+    {% if prediction %}
+        <h2>Predicted Gold Price: {{ prediction }}</h2>
+    {% endif %}
+    </div>
+    
+    <!-- <form action="/predict" method="post">
+        <label for="day">Day:</label>
+        <input type="text" name="day" required><br>
+
+        <label for="month">Month:</label>
+        <input type="text" name="month" required><br>
+
+        <label for="year">Year:</label>
+        <input type="text" name="year" required><br>
+
+        <label for="SPX">SPX:</label>
+        <input type="text" name="SPX" required><br>
+
+        <label for="USO">USO:</label>
+        <input type="text" name="USO" required><br>
+
+        <label for="SLV">SLV:</label>
+        <input type="text" name="SLV" required><br>
+
+        <label for="EUR/USD">EUR/USD:</label>
+        <input type="text" name="EUR/USD" required><br>
+
+        <button type="submit">Predict</button>
+    </form> -->
+     
+    <form class="form" action="/predict" method="post"  id="predictionForm">
+        <input class="input" type="text" name="day" required placeholder="day">
+        <input class="input" type="text" name="month" required placeholder="Month">
+        <input class="input" type="text" name="year" required placeholder="Year">
+        <input class="input" type="text" name="SPX" required placeholder="SPX">
+        <input class="input" type="text" name="USO" required placeholder="USO">
+        <input class="input" type="text" name="SLV" required placeholder="SLV">
+        <input class="input" type="text" name="EUR/USD" required placeholder="EUR/USD">
+        <center><button class="button" onclick="predict()">Preidict</button></center>
+    </form>
+    
+
+    
+</body>
+</html>
